@@ -25,7 +25,7 @@ Python 3 is the main requirement of the project along with the below mentioned l
 ## Project Motivation<a name="motivation"></a>
 
 Completing this project helped me dive deep into the following domains:
-- ETL (Extract, Transform, Learn)
+- ETL (Extract, Transform, Load)
 - Multi-label classification
 - Machine Learning Pipelines
 
