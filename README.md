@@ -7,7 +7,9 @@
 3. [Project Description](#description)
 4. [File Descriptions](#files)
 5. [Instructions](#instructions)
-6. [Licensing](#licensing)
+6. [Licensing & Acknowledgement](#licensing)
+7. [Screenshots](#Screenshot)
+
 
 ## Installation <a name="installation"></a>
 
@@ -79,6 +81,15 @@ The data set is provided by [Figure Eight](https://www.figure-eight.com/) contai
 
 3. Go to http://0.0.0.0:3001/
 
-## Licensing <a name="licensing"></a>
+## Licensing & Acknowledgement <a name="licensing"></a>
+
+This project came as a part of [Data Scientist Nanodegree](https://www.udacity.com/course/data-scientist-nanodegree--nd025) offered by Udacity.
 
 Feel free to use the above code as you would like! 
+
+## Screenshots <a name="Screenshot"></a>
+
+![](Home_Page.png)
+![](Genres_Distribution.png)
+![](Category_Distribution.png)
+![](Sample_Output.png)

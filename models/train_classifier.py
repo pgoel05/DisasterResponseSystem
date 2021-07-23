@@ -43,12 +43,6 @@ def load_data(database_filepath):
     engine = create_engine('sqlite:///'+database_filepath)
     df = pd.read_sql_table('DisasterResponse', engine)
 
-    # child_alone has zeroes, so it could be dropped
-    df.drop(['child_alone'], axis='columns', inplace=True)
-
-    # related 2 has very few values. It could be merged with the majority class 1
-    df['related'] = df['related'].map(lambda x: 1 if x == 2 else x)
-
     X = df["message"]
     Y = df[list(df.columns[4:])]
 
@@ -140,7 +134,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
 def save_model(model, model_filepath):
     """
     This function saves the created ML model in a pickle file
-    
+
     :param:
         model : ML model
         model_filepath : path to create the pickle file

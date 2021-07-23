@@ -56,6 +56,12 @@ def clean_data(df):
     df: clean dataframe
     """
 
+    # child_alone has zeroes, so it could be dropped
+    df.drop(['child_alone'], axis='columns', inplace=True)
+
+    # related 2 has very few values. It could be merged with the majority class 1
+    df['related'] = df['related'].map(lambda x: 1 if x == 2 else x)
+
     # removing duplicates
     if len(df[df.duplicated()]):
         df = df.drop_duplicates()
@@ -74,6 +80,7 @@ def save_data(df, database_filename):
 
     engine = create_engine('sqlite:///'+database_filename)
     df.to_sql('DisasterResponse', engine,if_exists = 'replace', index=False)
+
 
 def main():
     if len(sys.argv) == 4:
